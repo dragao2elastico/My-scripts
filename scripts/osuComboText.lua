@@ -1,3 +1,4 @@
+-- This is not my script
 function onCreatePost()
     makeLuaText("osucombo", "0x", 500, 0, 620) --left: 0 right: 775
     setTextSize("osucombo", 100)
