@@ -1,3 +1,4 @@
+-- This is not my script
 enableStrokes = true;
 function onCreatePost()
 	if enableStrokes then
