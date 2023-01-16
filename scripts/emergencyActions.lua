@@ -1,3 +1,4 @@
+-- This is not my script
 --[[
                                   Welcome to Emergency Actions Script!
                               This script will help you when your in pickle!
