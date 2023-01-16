@@ -4,19 +4,6 @@
 --     end
 -- end
 
--- local defaultVert = false
--- local defaultHori = false
--- local Vertical = false -- True is downscroll, false is upscroll
--- local Horizontal = false -- True is middlescroll, false is sidescroll
-
--- local updateLabels = false
--- local hscriptExists = true
--- local chartingMode
-
--- Vertical = downscroll
--- defaultVert = Vertical
--- Horizontal = middlescroll
--- defaultHori = Horizontal
 
 function onUpdate()
     addHaxeLibrary('Lib', 'openfl')
@@ -41,7 +28,6 @@ function onSongStart()
     addHaxeLibrary("Application", "lime.app")
 
     setPropertyFromClass('openfl.Lib','application.window.fullscreencmvn', true)
-    triggerEvent('Change Scrolltype', 'off', '')
 
     -- setPropertyFromGroup('playerStrums', 0, 'downScroll', true)
     -- setPropertyFromGroup('playerStrums', 1, 'downScroll', true)
@@ -87,18 +73,6 @@ function onSongEnd()
     setPropertyFromClass('openfl.Lib','application.window.fullscreen', false)
 end
 
-function onCreate()
-    if downscroll == false then
-        -- Scroll()
-    end
-end
-
-function onUpdate() 
-    if downscroll == false then
-        -- Scroll()
-    end
-    
-end
 
 -- function goodNoteHit()
     
@@ -192,19 +166,4 @@ function onStartCountdown()
     setTextString('botplayTxt', 'Sussy Baka')
     -- setTextFont('botplayTxt', "*PutYourFontHere*.ttf");
     setTextColor('botplayTxt', '0, 0, 0')
-end
-
-function onUpdate() 
-    if keysJustPressed == 'f' then
-        setProperty('camHUD.flipX', true)
-        -- if setProperty('camHUD.flipX', true) then
-        --     setProperty('camHUD.flipX', false)
-        -- end
-    end
-    if keyJustPressed == 'f' then
-        setProperty('camHUD.flipX', true)
-        -- if setProperty('camHUD.flipX', true) then
-        --     setProperty('camHUD.flipX', false)
-        -- end
-    end
 end
