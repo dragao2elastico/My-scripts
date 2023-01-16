@@ -1,3 +1,4 @@
+-- This is not my script
 local time_reverted = 0.5
 
 function onCreate(id, noteType, noteData, isSustainNote)
@@ -39,6 +40,7 @@ function noteMiss(id, noteType, noteData, isSustainNote)
     end
 end
 
+-- This is my script
 function onUpdate()
     health = getProperty('health');
     
