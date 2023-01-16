@@ -1,3 +1,4 @@
+-- This is not my script
 function onUpdatePost(elapsed)
 	local check = getProperty('startingSong') or getProperty('endingSong')
 	if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F1') then
