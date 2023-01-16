@@ -3,7 +3,7 @@ local time_reverted = 0.5
 function onCreate(id, noteType, noteData, isSustainNote)
     misses = getProperty('songMisses')
 
-    if keyJustPressed('left') then
+    if keyJustPressed == "left" then
         setProperty('songMisses', misses - 5)
         addScore(-10)
         setProperty('health', getProperty('health') +0.0475)
@@ -17,7 +17,7 @@ function onCreate(id, noteType, noteData, isSustainNote)
         setProperty('vocals.time', getPropertyFromClass('Conductor', 'songPosition') - time_reverted * 100)
     end
 
-    if keyJustPressed('right') then
+    if keyJustPressed == "right" then
         addScore(10)
         setProperty('health', getProperty('health') +0.0475)
         if flashingLights then
@@ -65,15 +65,6 @@ function onUpdate()
         characterPlayAnim('girlfriend', 'hey', true)
         setProperty('girlfriend.specialAnim', true)
     end
-
-    
-    -- if characterPlayAnim('boyfriend', 'hey', true) then 
-    --     setInterval(function()
-    --         characterPlayAnim('boyfriend', 'idle', true)
-    --         setProperty('boyfriend.specialAnim', false)
-    --     end, 5000)
-    --     process:loop()
-    -- end
     
     if keyJustPressed('space') then -- Defalth: space
         if getProperty('health') > -1 then
