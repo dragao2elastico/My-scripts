@@ -1,3 +1,4 @@
+-- This is not my script
 -- This script made by BillyLOLwkwk
 -- dont ever change this variable from path to cooldown
 local path = ''
