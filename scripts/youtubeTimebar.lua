@@ -1,3 +1,4 @@
+-- This is not my script
 function onUpdatePost()
   setProperty('timeBarBG.visible', false)
 
